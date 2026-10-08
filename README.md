@@ -6,7 +6,7 @@
 
 [![Status](https://img.shields.io/badge/Status-research_preview-D97706?style=flat-square)](#)
 [![Modalities](https://img.shields.io/badge/Modalities-ultrasound_+_clinical-7C3AED?style=flat-square)](#architecture)
-[![Code](https://img.shields.io/badge/Code-structure_only-6B7280?style=flat-square)](#repository-layout)
+[![Code](https://img.shields.io/badge/Code-utilities_available-2563EB?style=flat-square)](#repository-layout)
 
 </div>
 
@@ -33,15 +33,14 @@ AMTDAN combines multi-scale visual encoding, dynamic attention, graph reasoning,
 ```text
 AMTDAN/
 ├── assets/                 # architecture and result figures
-├── configs/                # task and experiment settings
-├── data/                   # ultrasound and clinical interfaces
-├── models/
-│   ├── visual_encoder/     # multi-scale feature extraction
-│   ├── dynamic_attention/  # quality-aware attention fusion
-│   ├── graph_encoder/      # anatomical relation modeling
-│   └── task_heads/         # disease-specific severity heads
-├── evaluation/             # multi-task metrics and ablations
+├── amtdan/
+│   ├── datasets/           # validated multimodal and 17-task contracts
+│   ├── evaluation/         # ordinal, agreement, and calibration metrics
+│   └── models/             # quality-aware missing-modality fusion
+├── docs/                   # evaluation, release, and governance protocols
+├── tests/                  # executable public-utility test suite
+├── pyproject.toml          # dependency-light package metadata
 └── README.md
 ```
 
-> Research preview. Model implementation is not included in this release.
+> Research preview. Validated schemas, metrics, and fusion utilities are public and tested. The trained AMTDAN architecture, weights, and restricted data are not included in this release.
